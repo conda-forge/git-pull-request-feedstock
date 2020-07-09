@@ -11,7 +11,7 @@ source:
   sha256: 6a14c0dc748653833eff3e1822e544f8b5ac45b79b015b643f8805b6d75fc590
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - git-pull-request = git_pull_request:main
