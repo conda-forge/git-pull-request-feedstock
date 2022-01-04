@@ -1,5 +1,5 @@
 {% set name = "git-pull-request" %}
-{% set version = "6.0.1" %}
+{% set version = "6.0.2" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6a14c0dc748653833eff3e1822e544f8b5ac45b79b015b643f8805b6d75fc590
+  sha256: e0c8fd5122a6783e9a92660cd43b94a933d6aadebfd1bb07d276fc60c1013973
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - git-pull-request = git_pull_request:main
