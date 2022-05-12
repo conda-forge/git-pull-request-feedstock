@@ -24,10 +24,11 @@ requirements:
     - setuptools_scm
   run:
     - git
+    - python >=3.7
     - attrs
     - daiquiri
     - pygithub
-    - python >=3.7
+    - requests
 
 test:
   imports:
