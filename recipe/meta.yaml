@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: e0c8fd5122a6783e9a92660cd43b94a933d6aadebfd1bb07d276fc60c1013973
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - git-pull-request = git_pull_request:main
@@ -20,11 +20,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools_scm
   run:
     - git
-    - python >=3.7
+    - python >={{ python_min }}
     - attrs
     - daiquiri
     - pygithub
@@ -39,6 +39,7 @@ test:
     - git-pull-request --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Mergifyio/git-pull-request
